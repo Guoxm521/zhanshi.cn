@@ -1,0 +1,238 @@
+// 公共样式
+* {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+.clearfix {
+	content: "";
+	display: block;
+	overflow: hidden;
+	clear: both;
+}
+.clearfix::after {
+	zoom: 1;
+}
+body {
+	margin: 10px;
+	font-size: 14px;
+	font-family: "微软雅黑";
+}
+
+// 表格的基础样式
+table {
+	width: 100%;
+	border: 1px solid #666666;
+	column-span: none;
+	thead {
+		width: 100%;
+		th {
+			height: 35px;
+		}
+	}
+	tbody {
+		tr {
+			text-align: center;
+			height: 32px;
+		}
+		button {
+			width: 60px;
+			height: 28px;
+			font-size: 14px;
+			color: #ffffff;
+			background-color: #1890ff;
+			border: none;
+		}
+		img {
+			width: 150px;
+			padding: 5px 0;
+		}
+	}
+}
+
+// 头部操作栏
+#action {
+	margin-bottom: 10px;
+	.left {
+		float: left;
+		button {
+			width: 65px;
+			height: 32px;
+			margin-right: 7px;
+			border: none;
+			color: #ffffff;
+			font-size: 16px;
+		}
+		#add {
+			background-color: #1890ff;
+		}
+		#del {
+			background-color: #ff4d4f;
+		}
+	}
+	.right {
+		float: right;
+		line-height: 32px;
+		input {
+			height: 32px;
+			box-sizing: border-box;
+			padding-left: 10px;
+			outline: none;
+		}
+		button {
+			color: #ffffff;
+			background-color: #1890ff;
+			border: none;
+			font-size: 16px;
+			width: 65px;
+			height: 32px;
+			box-sizing: border-box;
+		}
+	}
+}
+
+// 分页栏
+#pages {
+	margin-top: 10px;
+	float: right;
+	ul {
+		li {
+			display: inline-block;
+			a {
+				display: block;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				padding: 0 10px;
+				color: #666666;
+				border: 1px solid #999999;
+				border-radius: 3px;
+				&:hover {
+					border: 1px solid #1890ff;
+					color: #333333;
+				}
+			}
+		}
+	}
+}
+
+// 类别展示
+#sortclasslist {
+	padding: 20px 35px;
+	width: 800px;
+	#addtoplevel {
+		background-color: #1890ff;
+	}
+	tbody {
+		td {
+			height: 40px;
+		}
+		td:nth-child(3) {
+			text-align: left;
+			padding-left: 20px;
+		}
+		button {
+			&:nth-child(2) {
+				background-color: #73d13d;
+				margin: 0 10px;
+			}
+			&:nth-child(3) {
+				background-color: #f5222d;
+			}
+		}
+	}
+}
+// 类别添加页面
+#sortadd {
+	div {
+		font-size: 18px;
+		width: 500px;
+		border: 1px solid #333333;
+		padding: 20px 15px;
+		margin: 50px;
+		vertical-align: middle;
+		li {
+			input[type="text"] {
+				width: 250px;
+				height: 25px;
+				vertical-align: top;
+				padding-left: 15px;
+			}
+			input[type="button"] {
+				display: block;
+				margin-top: 15px;
+				height: 30px;
+				width: 80px;
+				background-color: #1890ff;
+				border: none;
+				outline: 1px solid #73d13d;
+			}
+		}
+	}
+}
+
+// 登录页面
+#login {
+	margin: 0 auto;
+	text-align: center;
+	background-color: #f0f2f5;
+	.main {
+		width: 100%;
+		margin-top: 100px;
+		h1 {
+			font-size: 36px;
+		}
+		form {
+			margin-top: 25px;
+			input {
+				display: block;
+				box-sizing: border-box;
+				margin: 0 auto;
+				width: 368px;
+				height: 40px;
+				font-size: 18px;
+				padding-left: 15px;
+				margin-bottom: 25px;
+
+				outline: 1px solid #73d13d;
+				&:nth-child(3) {
+					text-align: center;
+					background-color: #1890ff;
+					border: none;
+					font-size: 18px;
+					letter-spacing: 1rem;
+				}
+			}
+		}
+	}
+}
+
+// 照片上传input的样式
+#img_upload {
+	input {
+		width: 92px;
+		height: 38px;
+		opacity: 0;
+	}
+	span {
+		width: 92px;
+		height: 38px;
+		display: block;
+		background-color: #009688;
+		margin-top: -38px;
+		line-height: 38px;
+		text-align: center;
+		color: aliceblue;
+    }
+    img {
+        display: block;
+        width: 300px;
+        margin-top: 10px;
+    }
+}

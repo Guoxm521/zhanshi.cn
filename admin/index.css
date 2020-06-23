@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.clearfix {
+  content: "";
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+.clearfix::after {
+  zoom: 1;
+}
+body {
+  margin: 10px;
+  font-size: 14px;
+  font-family: "微软雅黑";
+}
+table {
+  width: 100%;
+  border: 1px solid #666666;
+  column-span: none;
+}
+table thead {
+  width: 100%;
+}
+table thead th {
+  height: 35px;
+}
+table tbody tr {
+  text-align: center;
+  height: 32px;
+}
+table tbody button {
+  width: 60px;
+  height: 28px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #1890ff;
+  border: none;
+}
+table tbody img {
+  width: 150px;
+  padding: 5px 0;
+}
+#action {
+  margin-bottom: 10px;
+}
+#action .left {
+  float: left;
+}
+#action .left button {
+  width: 65px;
+  height: 32px;
+  margin-right: 7px;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+}
+#action .left #add {
+  background-color: #1890ff;
+}
+#action .left #del {
+  background-color: #ff4d4f;
+}
+#action .right {
+  float: right;
+  line-height: 32px;
+}
+#action .right input {
+  height: 32px;
+  box-sizing: border-box;
+  padding-left: 10px;
+  outline: none;
+}
+#action .right button {
+  color: #ffffff;
+  background-color: #1890ff;
+  border: none;
+  font-size: 16px;
+  width: 65px;
+  height: 32px;
+  box-sizing: border-box;
+}
+#pages {
+  margin-top: 10px;
+  float: right;
+}
+#pages ul li {
+  display: inline-block;
+}
+#pages ul li a {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  padding: 0 10px;
+  color: #666666;
+  border: 1px solid #999999;
+  border-radius: 3px;
+}
+#pages ul li a:hover {
+  border: 1px solid #1890ff;
+  color: #333333;
+}
+#sortclasslist {
+  padding: 20px 35px;
+  width: 800px;
+}
+#sortclasslist #addtoplevel {
+  background-color: #1890ff;
+}
+#sortclasslist tbody td {
+  height: 40px;
+}
+#sortclasslist tbody td:nth-child(3) {
+  text-align: left;
+  padding-left: 20px;
+}
+#sortclasslist tbody button:nth-child(2) {
+  background-color: #73d13d;
+  margin: 0 10px;
+}
+#sortclasslist tbody button:nth-child(3) {
+  background-color: #f5222d;
+}
+#sortadd div {
+  font-size: 18px;
+  width: 500px;
+  border: 1px solid #333333;
+  padding: 20px 15px;
+  margin: 50px;
+  vertical-align: middle;
+}
+#sortadd div li input[type="text"] {
+  width: 250px;
+  height: 25px;
+  vertical-align: top;
+  padding-left: 15px;
+}
+#sortadd div li input[type="button"] {
+  display: block;
+  margin-top: 15px;
+  height: 30px;
+  width: 80px;
+  background-color: #1890ff;
+  border: none;
+  outline: 1px solid #73d13d;
+}
+#login {
+  margin: 0 auto;
+  text-align: center;
+  background-color: #f0f2f5;
+}
+#login .main {
+  width: 100%;
+  margin-top: 100px;
+}
+#login .main h1 {
+  font-size: 36px;
+}
+#login .main form {
+  margin-top: 25px;
+}
+#login .main form input {
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 368px;
+  height: 40px;
+  font-size: 18px;
+  padding-left: 15px;
+  margin-bottom: 25px;
+  outline: 1px solid #73d13d;
+}
+#login .main form input:nth-child(3) {
+  text-align: center;
+  background-color: #1890ff;
+  border: none;
+  font-size: 18px;
+  letter-spacing: 1rem;
+}
+#img_upload input {
+  width: 92px;
+  height: 38px;
+  opacity: 0;
+}
+#img_upload span {
+  width: 92px;
+  height: 38px;
+  display: block;
+  background-color: #009688;
+  margin-top: -38px;
+  line-height: 38px;
+  text-align: center;
+  color: aliceblue;
+}
+#img_upload img {
+  display: block;
+  width: 300px;
+  margin-top: 10px;
+}
