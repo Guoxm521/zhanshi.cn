@@ -2,19 +2,7 @@
     /* 数据删除  get接收id */
     include './../fun.php';
     $ids = $_POST['ids'];
-    $idstr = implode(',',$ids);
-    $mysql = new Mysql('cases');
-    $db = $mysql->connectdb();
-    $sql = "select img from cases where id in($idstr)";
-    $query = $db->query($sql);
-    $query->setFetchMode(PDO::FETCH_ASSOC);
-    $result = $query->fetchAll();
-    foreach($result as $v) {
-        $img =$v['img'];
-        if($img) {
-            unlink("./../upload/".$img);
-        }
-    };
+    $mysql = new Mysql('user');
     $count = $mysql->deleteByids($ids);
     if($count) {
         $data = [

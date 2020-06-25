@@ -3,6 +3,20 @@
     include './../fun.php';
     $ids = $_POST['ids'];
     $mysql = new Mysql('solution');
+
+    $idstr = implode(',',$ids);
+    $db = $mysql->connectdb();
+    $sql = "select img from solution where id in($idstr)";
+    $query = $db->query($sql);
+    $query->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $query->fetchAll();
+    foreach($result as $v) {
+        $img =$v['img'];
+        if($img) {
+            unlink("./../upload/".$img);
+        }
+    };
+
     $count = $mysql->deleteByids($ids);
     if($count) {
         $data = [

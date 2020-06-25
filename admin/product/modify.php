@@ -12,6 +12,7 @@
 <body>
     <?php
     include './../fun.php';
+    islogin();
     // 获取分类
     $sortclass = new Mysql('sortclass');
     $sdb = $sortclass->connectdb();

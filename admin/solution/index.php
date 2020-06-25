@@ -12,6 +12,7 @@
 <body id="about">
     <?php
     include './../fun.php';
+    islogin();
     $mysql = new Mysql('solution');
     $result = $mysql->selectAll();
     $str = '';
@@ -21,7 +22,7 @@
         $str .= "<td><input value=$id type=" . "'checkbox'" . "class=" . "'selectone'" . "></td>";
         $str .= "<td>$v[title]</td>";
         $str .= "<td>$v[sortname]</td>";
-        $imgpath = "./../upload/".$v['img'];
+        $imgpath = "./../upload/" . $v['img'];
         $str .= "<td><img src=$imgpath></td>";
         $str .= "<td>$v[views]</td>";
         $time = date('Y-m-d H:i:s', $v['time']);
@@ -31,6 +32,7 @@
     }
     ?>
 
+
     <!-- 头部的搜索一栏 -->
     <div id="action" class="clearfix">
         <div class="left">
@@ -38,10 +40,13 @@
             <button id="del">删除</button>
         </div>
         <div class="right">
-            <input type="text" name="" id="">
-            <input type="text" name="" id="">
-            <input type="text" name="" id="">
-            <button>搜索</button>
+            <form action="">
+                <input type="text" name="name" id="search_input">
+                <select name="sortclass" id="search_select">
+
+                </select>
+                <button id="ser">搜索</button>
+            </form>
         </div>
     </div>
     <!-- 中间表格栏 -->
@@ -51,26 +56,16 @@
                 <th style="width: 40px;"><input type="checkbox" id="selectAll"></th>
                 <th>名称</th>
                 <th>类别</th>
-                <th >小图</>
-                <th >浏览次数</th>
-                <th >发布时间</th>
-                <th >操作</th>
+                <th>小图</>
+                <th>浏览次数</th>
+                <th>发布时间</th>
+                <th>操作</th>
             </tr>
         </thead>
         <tbody>
-        <?php
+            <?php
             echo $str;
-        ?>
-            <!-- <tr>
-                <td><input type="checkbox"></td>
-                <td>南昌LED显示屏诺瓦系统7月案例</td>
-                <td>高清小间距</td>
-                <td><img src="./../avatar.jpg" alt=""></td>
-                <td>2560</td>
-                <td>2016-09-03 12:05:32</td>
-                <td><button>修改</button></td>
-            </tr> -->
-            
+            ?>
         </tbody>
     </table>
     <!-- 分页栏 -->
@@ -101,6 +96,8 @@
             user_defind.delete('./delete.php');
             user_defind.modify('./modify.php');
             user_defind.add('./add.php');
+            user_defind.getsort('解决方案');
+            user_defind.search('./search_and_page.php');
         })
     </script>
 </body>

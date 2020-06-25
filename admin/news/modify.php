@@ -17,6 +17,7 @@
 <body>
     <?php
     include './../fun.php';
+    islogin();
     // 获取分类
     $sortclass = new Mysql('news');
     $sdb = $sortclass->connectdb();

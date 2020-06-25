@@ -44,6 +44,10 @@ table tbody button {
   color: #ffffff;
   background-color: #1890ff;
   border: none;
+  margin-right: 4px ;
+}
+table tbody button:nth-child(2) {
+  background-color: #ff4d4f;
 }
 table tbody img {
   width: 150px;
@@ -87,6 +91,10 @@ table tbody img {
   width: 65px;
   height: 32px;
   box-sizing: border-box;
+}
+#action .right select {
+  height: 32px;
+  padding-left: 8px;
 }
 #pages {
   margin-top: 10px;
@@ -153,39 +161,6 @@ table tbody img {
   border: none;
   outline: 1px solid #73d13d;
 }
-#login {
-  margin: 0 auto;
-  text-align: center;
-  background-color: #f0f2f5;
-}
-#login .main {
-  width: 100%;
-  margin-top: 100px;
-}
-#login .main h1 {
-  font-size: 36px;
-}
-#login .main form {
-  margin-top: 25px;
-}
-#login .main form input {
-  display: block;
-  box-sizing: border-box;
-  margin: 0 auto;
-  width: 368px;
-  height: 40px;
-  font-size: 18px;
-  padding-left: 15px;
-  margin-bottom: 25px;
-  outline: 1px solid #73d13d;
-}
-#login .main form input:nth-child(3) {
-  text-align: center;
-  background-color: #1890ff;
-  border: none;
-  font-size: 18px;
-  letter-spacing: 1rem;
-}
 #img_upload input {
   width: 92px;
   height: 38px;
@@ -205,4 +180,72 @@ table tbody img {
   display: block;
   width: 300px;
   margin-top: 10px;
+}
+#loginpage {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+#loginpage .left {
+  float: left;
+  width: 65%;
+  height: 100%;
+  background-color: #F6F8FB;
+  position: relative;
+}
+#loginpage .left .main {
+  width: 364px;
+  height: 500px;
+  background-color: #FFFFFF;
+  position: absolute;
+  right: -187px;
+  top: 75px;
+  box-sizing: border-box;
+  padding: 35px 37px 0 37px;
+  border-radius: 10px;
+  box-shadow: #000000 5px 5px 25px;
+}
+#loginpage .left .main header h1 {
+  font-size: 32px;
+  font-weight: 500px;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #009688;
+}
+#loginpage .left .main form {
+  margin-top: 15px;
+}
+#loginpage .left .main form input {
+  width: 100%;
+  height: 36px;
+  outline: none;
+  margin-bottom: 15px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+#loginpage .left .main form input[type='button'],
+#loginpage .left .main form input[type='submit'] {
+  border-radius: 40px;
+  height: 40px;
+  margin-top: 15px;
+  border: none;
+  background-color: #2468F2;
+  border: 1px solid #cccccc;
+}
+#loginpage .left .main form span {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 5px;
+}
+#loginpage .left .main form a {
+  font-size: 12px;
+}
+#loginpage .left .main form a:nth-child(2) {
+  float: right;
+}
+#loginpage .right {
+  float: right;
+  width: 35%;
+  height: 100%;
+  background-color: #2468F2;
 }

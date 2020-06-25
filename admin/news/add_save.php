@@ -5,7 +5,11 @@
         也有文件传来
     */
     include './../fun.php';
-    $_POST['img']=fileup($_FILES['files']);
+    if($_FILES['files']) {
+        $_POST['img']=fileup($_FILES['files']);
+    } else {
+        $_POST['img']='';
+    }
     $_POST['time']=time();
     $_POST['views']=2989;
     $mysql = new Mysql('news');

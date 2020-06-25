@@ -17,3 +17,16 @@ function formatTime(time) {
     var time = y + "-" + m + "-" + d + " " + h + ":" + f + ":" + s;
     return time;
 }
+
+// 自定义获得地址栏的search
+function getSearch(){
+	var search = window.location.search;
+	search = search.substr(1);
+	var searcharr = search.split('&');
+	var obj = new Object();
+	for(var i=0;i<searcharr.length;i++) {
+		var tmp = searcharr[i].split('=');
+		obj[decodeURIComponent(tmp[0])]=decodeURIComponent(tmp[1]);
+	}
+	return obj;
+}

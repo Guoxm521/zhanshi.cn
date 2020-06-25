@@ -17,6 +17,7 @@
 <body>
 	<?php
 	include './../fun.php';
+	islogin();
 	$mysql = new Mysql('sortclass');
 	$db = $mysql->connectdb();
 	$result = select_sort($db, '新闻资讯');
@@ -81,7 +82,9 @@
 				var data = data.field;
 				var file_obj = document.getElementById('files').files[0];
 				var formData = new FormData();
-				formData.append('files', file_obj);
+				if(file_obj) {
+					formData.append('files', file_obj);
+				};
 				formData.append('title', data.title);
 				formData.append('content', getContent());
 				formData.append('sortname', data.sortname);

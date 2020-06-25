@@ -12,6 +12,7 @@
 <body id="about">
     <?php
     include './../fun.php';
+    islogin();
     $mysql = new Mysql('cases');
     $result = $mysql->selectAll();
     $str = '';
@@ -38,10 +39,11 @@
             <button id="del">删除</button>
         </div>
         <div class="right">
-            <input type="text" >
-            <input type="text">
-            <input type="text">
-            <button>搜索</button>
+            <input type="text" name="name" id="search_input">
+            <select name="" name="sortclass" id="search_select">
+                
+            </select>
+            <button  id="ser">搜索</button>
         </div>
     </div>
     <!-- 中间表格栏 -->
@@ -101,6 +103,8 @@
             user_defind.delete('./delete.php');
             user_defind.modify('./modify.php');
             user_defind.add('./add.php');
+            user_defind.getsort('案例中心');
+            user_defind.search('./search_and_page.php')
         })
     </script>
 </body>

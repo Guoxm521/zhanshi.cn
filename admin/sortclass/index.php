@@ -12,6 +12,7 @@
 <body id="sortclasslist">
     <?php
     include './../fun.php';
+    islogin();
     $mysql = new Mysql('sortclass');
     $db = $mysql->connectdb();
     $result = get_sortclass($parentid = 0, $db);

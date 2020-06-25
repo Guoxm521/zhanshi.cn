@@ -59,17 +59,18 @@
                     $str .= 'and'.' '.$k.'='.'"'."$v".'"'.' ';
                 }
                 $str = substr($str,4);
+                $sql = "select * from $this->table where $str";
             }elseif($type == false) {
                 foreach($arr as $k=>$v) {
-                    $str .= "and".' '.$k.' '.'like'.' '."%$v%";
+                    $str .= " "."and".' '.$k.' '.'like'.' '.'"'."%$v%".'"';
                 }
-                $str = substr($str,3);
+                $str = substr($str,4);
+                $sql = "select * from $this->table where  $str";
             }
-            $sql = "select * from $this->table where $str";
             $db = $this->connectdb();
             $query = $db->query($sql);
             $query->setFetchMode(PDO::FETCH_ASSOC);
-            $result = $query->fetch();
+            $result = $query->fetchAll();
             return $result;
         }   
 
@@ -106,7 +107,6 @@
             $count = $db->exec($sql);
             return  $count;
         }
-
         /* 
             数据修改 传入id值 以及修改的内容
             修改内容使用数组的形式传入  方便多个值更改
@@ -122,6 +122,33 @@
             $result = $db->exec($sql);
             return $result;
         }
+        /* 
+            查询总数获得页码
+        */
+        public function getpages($arr) {
+            if($arr) {
+                $name = isset($arr['name'])?$_POST['name']:'';
+                $sortclass = isset($arr['sortclass'])?$_POST['sortclass']:'';
+                $search = '';
+                $params = '';
+                if($_POST['name']) {
+                    $search .= " and name like '%$name%'";
+                    $params .= "&name=$name";
+                };
+                if($_POST['sortname']) {
+                    $search .= " and sortclass like '%$sortclass%'";
+                    $params .= "&sortclass=$sortclass";
+                 };
+            };
+            $mysql = new Mysql('product');
+            $db = $mysql->connectdb();
+            $sql = "select count(id) as t from $this->table $search";
+            $query = $db->query($sql);
+            $row = $query->fetch();
+            $total = $row['t'];
+            return $total;
+        }
+    
     }
     /* 
         类别添加展示页面
@@ -153,7 +180,6 @@
         }
         return $arr;
     }
-
     /* 
         查询类别  $tablename 数据库名称 $name 父级id的名称
     */
@@ -191,6 +217,27 @@
             $newname = time().rand(0,100).'.'.$ext;
             move_uploaded_file($file["tmp_name"],"./../upload/".$newname);
             return $newname;
+        }
+    }
+
+
+    /* 
+        密码加密
+    */
+    function getEncypt($password) {
+        $password = md5($password);
+        $password =sha1(substr($password,2,15));
+        return $password;
+    }
+
+    /* 
+        检测是否登录
+    */
+    function islogin() {
+        session_start();
+        if(!$_SESSION['username']) {
+            echo "<script>parent.location.href='/admin/login.php';</script>";
+            die();
         }
     }
 ?>

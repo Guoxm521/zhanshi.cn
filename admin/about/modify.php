@@ -39,7 +39,7 @@
         <div class="layui-form-item">
             <label class="layui-form-label">类别</label>
             <div class="layui-input-block">
-                <select name="sort" lay-verify="required">
+                <select name="sortname" lay-verify="required">
                     <?php
                     echo $str;
                     ?>

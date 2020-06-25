@@ -12,6 +12,7 @@
 <body>
   <?php
   include './../fun.php';
+  islogin();
   $mysql = new Mysql('sortclass');
   $db = $mysql->connectdb();
   $result = select_sort($db, '案例中心');

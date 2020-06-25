@@ -10,6 +10,10 @@
 </head>
 
 <body>
+    <?php
+        include './../fun.php';
+        islogin();
+    ?>
     <div style="width:600px; margin-top:15px">
 
         <div class="layui-form-item">

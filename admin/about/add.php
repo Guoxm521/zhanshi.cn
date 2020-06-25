@@ -11,6 +11,7 @@
 	<body>
 		<?php
 			include './../fun.php';
+			islogin();
 			$mysql = new Mysql('sortclass');
 			$db = $mysql->connectdb();
 			$result = select_sort($db,'关于我们');
@@ -37,7 +38,7 @@
 			<div class="layui-form-item">
 				<label class="layui-form-label">类别</label>
 				<div class="layui-input-block">
-					<select name="sort" lay-verify="required">
+					<select name="sortname" lay-verify="required">
 						<?php
 						echo $str;
 						?>

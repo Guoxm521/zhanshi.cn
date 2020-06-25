@@ -13,6 +13,7 @@
 <body id="about">
     <?php
     include './../fun.php';
+    islogin();
     $mysql = new Mysql('about');
     $result = $mysql->selectAll();
     $str = '';
@@ -20,7 +21,7 @@
         $str .= "<tr>";
         $id = $v['id'];
         $str .= "<td><input value=$id type=" . "'checkbox'" . "class=" . "'selectone'" . "></td>";
-        $str .= "<td>$v[sort]</td>";
+        $str .= "<td>$v[sortname]</td>";
         $content = mb_substr($v['content'], 0, 200);
         $str .= "<td>$content</td>";
         $time = date('Y-m-d H:i:s', $v['time']);
@@ -37,14 +38,14 @@
         </div>
 
         <div class="right">
-            <input type="text">
-            <input type="text">
-            <input type="text">
-            <button>搜索</button>
+            <select name="sortclass" id="search_select"">
+                
+            </select>
+            <button id="ser">搜索</button>
         </div>
     </div>
     <!-- 中间表格栏 -->
-    <table cellspacing=0 border="1" cellpadding="5px">
+    <table cellspacing=0 border="1" cellpadding="5px" style="text-align: center;">
         <thead>
             <tr>
                 <th style="width: 40px;"><input type="checkbox" id="selectAll"></th>
@@ -88,6 +89,9 @@
             user_defind.delete('./delete.php');
             user_defind.modify('./modify.php');
             user_defind.add('./add.php');
+            user_defind.getsort('关于我们');
+            user_defind.search('./search_and_page.php','about');
+        
         })
     </script>
 </body>
