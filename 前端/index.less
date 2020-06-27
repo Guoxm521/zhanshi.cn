@@ -1,0 +1,402 @@
+/* 
+    默认属性
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+.clearfix:after {
+	content: "";
+	height: 0;
+	display: block;
+	visibility: hidden;
+	overflow: hidden;
+	clear: both;
+}
+.clearfix {
+	zoom: 1;
+}
+// 头部开始
+header {
+	width: 100%;
+	background-color: #fff;
+	.header-main {
+		width: 1080px;
+		margin: 0 auto;
+		height: 125px;
+		padding-top: 28px;
+		box-sizing: border-box;
+		.logo {
+			float: left;
+			width: 278px;
+		}
+		.search {
+			width: 350px;
+			height: 36px;
+			margin-top: 18px;
+			font-size: 0;
+			box-sizing: border-box;
+			float: left;
+			margin-left: 110px;
+
+			input {
+				width: 197px;
+				height: 100%;
+				float: left;
+				box-sizing: border-box;
+				outline: none;
+				border: 1px solid #cccccc;
+				vertical-align: middle;
+				padding-left: 10px;
+			}
+			.select-box {
+				height: 100%;
+				width: 107px;
+				float: left;
+				box-sizing: border-box;
+				border: 1px solid #cccccc;
+				border-left: 0;
+				overflow: hidden;
+				select {
+					width: 100%;
+					height: 36px;
+					outline: none;
+					box-sizing: border-box;
+					border: none;
+					padding-left: 10px;
+				}
+			}
+			img {
+				display: block;
+				height: 36px;
+				box-sizing: border-box;
+				border-left: 0;
+			}
+		}
+		.tel {
+			width: 248px;
+			height: 69px;
+			float: right;
+			box-sizing: border-box;
+			background: url("./img/tel.jpg") no-repeat 0px 9px;
+			padding-left: 52px;
+			padding-top: 9px;
+			p {
+				font-size: 16px;
+				color: #000000;
+			}
+			h1 {
+				font-size: 22px;
+				color: #000000;
+			}
+		}
+	}
+}
+// 头部结束
+
+// 导航栏开始
+nav {
+	height: 100px;
+	width: 100%;
+	background-color: #043e80;
+	border-bottom: 10px solid #fff;
+	ul {
+		width: 1080px;
+		height: 100%;
+		margin: 0 auto;
+		display: flex;
+		li {
+			flex: 1;
+			height: 100%;
+			text-align: center;
+			background-image: linear-gradient(to right, #043e80, #0754ac);
+			a {
+				display: block;
+				width: 100%;
+				height: 100%;
+				color: #ffffff;
+				p {
+					padding-top: 34px;
+					font-size: 16px;
+				}
+				span {
+					font-size: 12px;
+				}
+			}
+			ul {
+				width: 100%;
+				li {
+					height: 25px;
+				}
+			}
+		}
+	}
+}
+// 导航栏结束
+
+// 轮播图开始
+.swiper-container {
+	width: 1080px;
+	height: 440px;
+	margin: 0 auto;
+	background-color: pink;
+	.swiper-wrapper {
+		width: 1080px;
+		height: 440px;
+		img  {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+//  轮播图结束
+// 中间主要部分开始
+.box-title {
+	line-height: 33px;
+	border-bottom: 1px solid #cfd9e2;
+	box-sizing: border-box;
+	margin-bottom: 15px;
+	h3 {
+		float: left;
+		border-bottom: 2px solid #0754ac;
+		font-size: 18px;
+		span {
+			margin-right: 5px;
+			color: #0754ac;
+		}
+	}
+	a {
+		float: right;
+		font-size: 12px;
+		color: #0754ac;
+	}
+}
+.main {
+	width: 1080px;
+	margin: 0 auto;
+	.main-top {
+		width: 100%;
+		height: 290px;
+		box-sizing: border-box;
+		margin-top: 23px;
+		padding: 17px;
+		background-color: #fff;
+
+		.solution {
+			width: 235px;
+			float: left;
+			.solution-title {
+				height: 35px;
+				line-height: 35px;
+				background-color: #0756b0;
+				color: #fff;
+				padding: 0 25px 0 12px;
+				h3 {
+					font-size: 18px;
+				}
+				a {
+					font-size: 12px;
+					float: right;
+					color: #fff;
+				}
+			}
+			.solution-main {
+				padding: 20px 40px 0;
+				li {
+					list-style: square;
+					line-height: 23px;
+				}
+				a {
+					font-size: 12px;
+					color: #676767;
+				}
+			}
+		}
+		.about {
+			width: 480px;
+			float: left;
+			margin-left: 34px;
+			.about-main {
+				padding: 0 5px;
+				img {
+					display: block;
+					float: left;
+					width: 166px;
+					height: 180px;
+				}
+				.about-content {
+					width: 290px;
+					float: right;
+					p {
+						margin-top: 10px;
+						text-indent: 2rem;
+						float: right;
+						font-size: 12px;
+						color: #676767;
+						line-height: 20px;
+					}
+				}
+			}
+		}
+		.contact {
+			float: left;
+			width: 256px;
+			margin-left: 32px;
+			.contact-main {
+				img {
+					width: 100%;
+				}
+				ul {
+					padding: 10px 7px;
+					li {
+						font-size: 12px;
+						line-height: 20px;
+					}
+				}
+			}
+		}
+	}
+	.main-middle {
+		.cases {
+			width: 100%;
+			height: 286px;
+			box-sizing: border-box;
+			margin-top: 23px;
+			padding: 17px;
+			background-color: #fff;
+			.cases-content {
+				display: flex;
+				margin-top: 23px;
+				a {
+					display: block;
+					float: 0.25;
+					margin: 0 12px;
+					position: relative;
+					img {
+						display: block;
+						width: 100%;
+					}
+					span {
+						position: absolute;
+						display: block;
+						width: 100%;
+						height: 32px;
+						line-height: 32px;
+						bottom: 0;
+						background-color: #0754ac;
+						color: #fff;
+						font-size: 14px;
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+	.main-bottom {
+		width: 100%;
+		height: 320px;
+		box-sizing: border-box;
+		margin-top: 23px;
+		padding: 17px;
+		background-color: #fff;
+		display: flex;
+		.new,
+		.industry,
+		.product {
+			flex: 1;
+			ul {
+				li {
+					height: 36px;
+					line-height: 36px;
+					border-bottom: 1px dotted #cccccc;
+					padding-left: 15px;
+				}
+				a {
+					font-size: 10px;
+					&::before {
+						content: "";
+						// visibility: hidden;
+						display: inline-block;
+						width: 4px;
+						height: 4px;
+						background-color: #000000;
+						vertical-align: middle;
+						margin-right: 8px;
+					}
+				}
+			}
+		}
+		.industry {
+			margin: 0 42px;
+		}
+	}
+}
+
+// 底部
+.footer {
+	height: 142px;
+	width: 100%;
+	background-color: #043e80;
+	margin-top: 45px;
+	.footer-main {
+        width: 1080px;
+        margin: 0 auto;
+		display: flex;
+		.left {
+            flex: 2;
+            color: #ffffff;
+            padding-top: 30px;
+            h3 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 30px;
+            }
+		}
+		.main {
+            flex: 6;
+            text-align: center;
+            margin-top: 40px;
+            box-sizing: border-box;
+            ul {
+                li {
+                    display: inline-block;
+                    padding: 0 8px;
+                }
+                a {
+                    color: #cccccc;
+                    font-size: 12px;
+                }
+                span {
+                    font-size: 12px;
+                }
+            }
+            p {
+                font-size: 12px;
+                color: #fff;
+                margin-top: 8px;
+            }
+		}
+		.right {
+            flex: 2;
+            img {
+                display: block;
+                float: right;
+                width: 104px;
+                height: 104px;
+                margin-top: 20px;
+                margin-right: 10px;
+            }
+		}
+	}
+}
