@@ -40,13 +40,13 @@
             <button id="del">删除</button>
         </div>
         <div class="right">
-            <form action="">
+ 
                 <input type="text" name="name" id="search_input">
                 <select name="sortclass" id="search_select">
 
                 </select>
                 <button id="ser">搜索</button>
-            </form>
+
         </div>
     </div>
     <!-- 中间表格栏 -->
